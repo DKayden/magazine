@@ -19,16 +19,6 @@ class ModbusServer():
                     ir=self.datablock_input_register,
                 ),
             },single=False)
-        self.identity = ModbusDeviceIdentification(
-            info_name={
-                "VendorName": "ManhCuong",
-                "ProductCode": "PM",
-                "VendorUrl": "cuongtrantb99@gmail.com",
-                "ProductName": "Pymodbus Server",
-                "ModelName": "Pymodbus Server",
-                "MajorMinorRevision": pymodbus_version
-            }
-        )
     
     async def run_server_serial(self):
         print("run modbus server")
